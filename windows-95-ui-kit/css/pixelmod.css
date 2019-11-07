@@ -1657,7 +1657,7 @@ button.section-black:focus {
     border-left: 1px solid #08080E;
     border-right: 1px solid #FCFCFC;
     border-bottom: 1px solid #FCFCFC;
-    padding: 5px 15px;
+    padding: 5px 0px;
 }
 
 .navbar .navbar-nav .nav-link:before {
