@@ -1,35 +1,85 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
-<title>so cool a website</title>
-<style>
-body { background-image: url("img/bg.png");
-		background-repeat: repeat;}
-h1   {color: white;
-	font-family: "Comic Sans", "Comic Sans MS", "Chalkboard", "ChalkboardSE-Regular", sans-serif;}
-p    {color: white;
-	font-family: "Comic Sans", "Comic Sans MS", "Chalkboard", "ChalkboardSE-Regular", sans-serif;}
-hr   {
-  border: 3px dashed white;
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Media dude.">
+    <meta name="author" content="Themesberg">
+    <title>Brandon Simon-Horton</title>
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="60x60" href="img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="img/favicon/site.webmanifest">
+    <link rel="mask-icon" href="img/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#2d89ef">
+    <meta name="theme-color" content="#ffffff">
+    <!-- Bootstrap CSS -->
+    <link type="text/css" rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <!-- Pixel CSS -->
+    <link type="text/css" rel="stylesheet" href="css/pixelmod.css">
+	
+	<script>
+function startTime() {
+  var today = new Date();
+  var h = today.getHours();
+  var m = today.getMinutes();
+  var s = today.getSeconds();
+  m = checkTime(m);
+  s = checkTime(s);
+  document.getElementById('txt').innerHTML =
+  h + ":" + m + ":" + s;
+  var t = setTimeout(startTime, 500);
 }
-a {
-  color: white;
+function checkTime(i) {
+  if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+  return i;
 }
-</style>
+</script>
+
 </head>
-<body>
-<div align=center>
-<img src="img/digman.gif" alt="UNDER CONSTRUCTION" title="UNDER CONSTRUCTION"></img><img src="img/consign.gif" alt="UNDER CONSTRUCTION" title="UNDER CONSTRUCTION"></img><img src="img/digman.gif" alt="UNDER CONSTRUCTION" title="UNDER CONSTRUCTION"></img>
-<br><hr>
-<h1>welcome 2 my netspace!</h1>
-<p>it isnt finished yet, but i promise it'll be really cool soon!!</p><br>
-<p>in the mean time why not maybe check me out on the <a href="https://www.instagram.com/brandonshorton">instagram</a> or <a href="https://www.twitter.com/brandonsh">twitters</a>?</p>
-<p>see u on the information superhighway!!</p>
-<br>
-<img src="img/compy386.gif" alt="surf the net" title="surf the net"></img><br>
-<img src="img/flames.gif" alt="zer0 c00l" title="hackers was the best movie ever!!"></img><br>
-<img src="img/bigstruct.gif" alt="UNDER CONSTRUCTION" title="UNDER CONSTRUCTION"></img>
-<br><hr>
-<img src="img/netscape1.gif" alt="INTERNET EXPLORER SUX" title="INTERNET EXPLORER SUX"></img> <img src="img/mcafee.gif" alt="viruses are bad" title="viruses are bad"></img> <img src="img/aol.gif" alt="screw aol i cant play neopets on it" title="screw aol i cant play neopets on it"></img>
-</div>
+
+<body onload="startTime()" class="bg-secondary">
+<section class="section section-hero bg-secondary super-center overflow-hidden z-2">
+<div class="col-12 col-lg-4 mb-4 mb-lg-0">
+    <div class="card card-tertiary">
+        <div class="card-header">
+            <span class="icon icon-xs w95-trashman"></span>
+            <span class="ml-4">Brandon Simon-Horton</span>
+        </div>
+        <div class="card-body">
+        <div class="row no-gutters">
+            <div class="col-auto">
+                <img src="img/moi.png" class="image-lg" alt="">
+            </div>
+            <div class="col">
+                <div class="card-block px-2">
+                    <p class="card-text">Hello! I'm Brandon. I'm a Film Production Technology student who hates writing about himself.</p>
+					<p class="card-text">I tend to just dabble in a bit of everything in the creative tech space.</p>
+					<p class="card-text">If you wanna see some of my work, click your mouse finger down on those buttons down there.</p>
+                    <a href="https://www.twitter.com/brandonsh" target="_blank" class="btn mr-2 mb-2 btn-primary btn-sm border-dark">Twitter</a>
+					<a href="https://www.instagram.com/brandonshorton" target="_blank" class="btn mr-2 mb-2 btn-primary btn-sm border-dark">Instagram</a>
+					<a href="underconstruction/underconstruction.html" target="_blank" class="btn mr-2 mb-2 btn-primary btn-sm border-dark">GeoCities</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="footer container-fluid bg-secondary">
+        <nav id="navbar-footer"
+            class="navbar navbar-main navbar-expand-lg navbar-dark justify-content-between navbar-footer">
+            <ul class="navbar-nav navbar-nav-hover flex-row align-items-center">
+                <li class="nav-item">
+                    <a href="../index.html" class="nav-link" role="button">
+                        <span class="nav-link-inner-text">Start</span>
+                    </a>
+                </li>
+            </ul>
+            <div class="time text-center">
+                <span class="time text-uppercase" id="txt"></span>
+            </div>
+        </nav>
+</section>
 </body>
 </html>
