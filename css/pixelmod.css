@@ -7715,6 +7715,12 @@ a:hover,
   height: 2.5rem;            /* Footer height */
 }
 	  
+.recessed-border {
+	border-top: 3px solid #08080E;
+    border-left: 3px solid #08080E;
+    border-right: 3px solid #FCFCFC;
+    border-bottom: 3px solid #FCFCFC;
+}
 	  
 
 
