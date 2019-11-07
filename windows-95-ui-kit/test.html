@@ -19,9 +19,28 @@
     <link type="text/css" rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
     <!-- Pixel CSS -->
     <link type="text/css" rel="stylesheet" href="css/pixelmod.css">
+	
+	<script>
+function startTime() {
+  var today = new Date();
+  var h = today.getHours();
+  var m = today.getMinutes();
+  var s = today.getSeconds();
+  m = checkTime(m);
+  s = checkTime(s);
+  document.getElementById('txt').innerHTML =
+  h + ":" + m + ":" + s;
+  var t = setTimeout(startTime, 500);
+}
+function checkTime(i) {
+  if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+  return i;
+}
+</script>
+
 </head>
 
-<body>
+<body onload="startTime()" class="bg-secondary">
 <section class="section section-hero bg-secondary super-center overflow-hidden z-2">
 <div class="col-12 col-lg-4 mb-4 mb-lg-0">
     <div class="card card-tertiary">
@@ -40,6 +59,31 @@
             </div>
         </div>
     </div>
+</section>
+<section class="footer container-fluid bg-secondary">
+        <nav id="navbar-footer"
+            class="navbar navbar-main navbar-expand-lg navbar-dark justify-content-between navbar-footer">
+            <ul class="navbar-nav navbar-nav-hover flex-row align-items-center">
+                <li class="nav-item">
+                    <a href="../index.html" class="nav-link" role="button">
+                        <span class="nav-link-inner-text">📺 Start</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="introduction.html" class="nav-link" role="button">
+                        <span class="nav-link-inner-text">📕 Documentation</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="https://themesberg.com/product/windows-95-ui-kit" target="_blank" class="nav-link" role="button">
+                        <span class="nav-link-inner-text">Download</span>
+                    </a>
+                </li>
+            </ul>
+            <div class="time text-center">
+                <span class="time text-uppercase" id="txt"></span>
+            </div>
+        </nav>
 </section>
 </body>
 </html>
